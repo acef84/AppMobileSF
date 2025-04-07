@@ -19,44 +19,44 @@ export default function Main(){
     <ScrollView>
         <View style={styles.Novidade}>
             <View style={styles.capaFobia}>
-                <Image style={styles.fobia} source={require('../../../../../assets/fobia.png')} />
+                <Image style={styles.fobia} source={require('../../../../assets/fobia.png')} />
             </View>
             <View style={styles.gamesDestaques}>
                 <View style={styles.bannersDestaques}>
-                    <Image style={styles.outroNome} source={require('../../../../../assets/layers.png')} />
-                    <Image style={styles.outroNome} source={require('../../../../../assets/outlast.png')} />
+                    <Image style={styles.outroNome} source={require('../../../../assets/layers.png')} />
+                    <Image style={styles.outroNome} source={require('../../../../assets/outlast.png')} />
                 </View>
                 <View style={styles.segundo}>
-                    <Image style={styles.destaque01} source={require('../../../../../assets/bloober.jpg')} />
+                    <Image style={styles.destaque01} source={require('../../../../assets/bloober.jpg')} />
                     <Text style={styles.nameGame}>Layers Of Fear</Text>
-                    <Image style={styles.outroNomeMini} source={require('../../../../../assets/RedBarrels.jpg')} />
+                    <Image style={styles.outroNomeMini} source={require('../../../../assets/RedBarrels.jpg')} />
                     <Text style={styles.nameGame}>Fobia - Pulsatrix Studi</Text>
                 </View>
             </View>
             <View style={styles.jogos}>
                 <View style={styles.containerFobia}>
                     <View style={styles.capaTitulo}>
-                        <Image style={styles.capa} source={require('../../../../../assets/cuphead.png')} />
+                        <Image style={styles.capa} source={require('../../../../assets/cuphead.png')} />
                         <Text style={styles.colorCapa}>Cuphead</Text>
                     </View>
                     <View style={styles.capaTitulo}>
-                        <Image style={styles.capa} source={require('../../../../../assets/celeste4.png')} />
+                        <Image style={styles.capa} source={require('../../../../assets/celeste4.png')} />
                         <Text style={styles.colorCapa}>Celeste</Text>
                     </View>
                     <View style={styles.capaTitulo}>
-                        <Image style={styles.capa} source={require('../../../../../assets/hades4.png')} />
+                        <Image style={styles.capa} source={require('../../../../assets/hades4.png')} />
                         <Text style={styles.colorCapa}>Hades</Text>
                     </View>
                     <View style={styles.capaTitulo}>
-                        <Image style={styles.capa} source={require('../../../../../assets/oxenfree.png')} />
+                        <Image style={styles.capa} source={require('../../../../assets/oxenfree.png')} />
                         <Text style={styles.colorCapa}>Oxenfree</Text>
                     </View>
                     <View style={styles.capaTitulo}>
-                        <Image style={styles.capa} source={require('../../../../../assets/journey.png')} />
+                        <Image style={styles.capa} source={require('../../../../assets/journey.png')} />
                         <Text style={styles.colorCapa}>Journey</Text>
                     </View>
                     <View style={styles.capaTitulo}>
-                        <Image style={styles.capa} source={require('../../../../../assets/knight.png')} />
+                        <Image style={styles.capa} source={require('../../../../assets/knight.png')} />
                         <Text style={styles.colorCapa}>Hollow Knight</Text>
                     </View>
                 </View>

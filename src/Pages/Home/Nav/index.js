@@ -5,12 +5,12 @@ export default function Nav() {
     return (
         <View style={styles.container}>
             <View style={styles.logo}>
-                <Image style={styles.outroNomeMini} source={require('../../../../../assets/safeStar.png')} />
+                <Image style={styles.outroNomeMini} source={require('../../../../assets/safeStar.png')} />
             </View>
             <View style={styles.icones}>
-                <Image style={styles.outroNomeMini} source={require('../../../../../assets/notificacoes.png')} />
-                <Image style={styles.outroNomeMini} source={require('../../../../../assets/pesquisar.png')} />
-                <Image style={styles.outroNomeMini} source={require('../../../../../assets/minhaConta.png')} />
+                <Image style={styles.outroNomeMini} source={require('../../../../assets/notificacoes.png')} />
+                <Image style={styles.outroNomeMini} source={require('../../../../assets/pesquisar.png')} />
+                <Image style={styles.outroNomeMini} source={require('../../../../assets/minhaConta.png')} />
             </View>
         </View>
     );
@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
         width: '50%', // Faz os ícones ocuparem 50% da largura disponível
         alignItems: 'center', // Alinha os ícones verticalmente ao centro
         paddingLeft: '0'
+
     }
 });
