@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { View } from 'react-native'; // 👈 IMPORTANTE!
+
+import Footer from './Footer/Footer';
+import TelaDownload from './Game/TelaDowload';
+import Nav from './Nav/Nav';
 
 export default function ViewJogos() {
   return (
-    <View style={styles.container}>
-      <Text>Olá seja Bem vindo a tela de informações dos jogos!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1 }}>
+      <Nav />
+      <TelaDownload />
+      <Footer />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
