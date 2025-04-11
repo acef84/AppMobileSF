@@ -1,17 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import BarraPesquisa from './src/Pages/BarraPesquisa';
-import Cadastro from './src/Pages/Cadastro';
-import Home from './src/Pages/Home';
-import Login from './src/Pages/Login';
-import Suporte from './src/Pages/Suporte';
-import ViewJogos from './src/Pages/ViewJogos';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import Nav from './src/Pages/ViewJogos/Nav/Nav';
+import TelaDownload from './src/Pages/ViewJogos/Game/TelaDowload';
+import Footer from './src/Pages/ViewJogos/Footer/Footer'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Nav/>
+      <ScrollView>
+        <TelaDownload/>
+      </ScrollView>
+      <Footer/>
     </View>
   );
 }
@@ -19,8 +18,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#750000',
+  },
+  content: {
+    flex: 1, // O ScrollView ocupa todo o espaço disponível, exceto o do Footer
   },
 });
