@@ -1,26 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import BarraPesquisa from './src/Pages/BarraPesquisa';
-import Cadastro from './src/Pages/Cadastro';
-import Home from './src/Pages/Home';
-import Login from './src/Pages/Login';
-import Suporte from './src/Pages/Suporte';
-import ViewJogos from './src/Pages/ViewJogos';
+import React, { useState } from 'react';
+import { View, StyleSheet, SafeAreaView } from 'react-native';
+import Footer from './src/Pages/BarraPesquisa/Footer';
+import Main from './src/Pages/BarraPesquisa/Main';
+import Nav from './src/Pages/BarraPesquisa/Nav';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    const [searchQuery, setSearchQuery] = useState(""); // Estado para a pesquisa
+    const [isFocused, setIsFocused] = useState(false); // Estado para controlar se o campo está focado
+
+    return (
+        <View style={{ flex: 1 }}>
+            <SafeAreaView style={styles.container}>
+                <Nav
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
+                    isFocused={isFocused}
+                    setIsFocused={setIsFocused}
+                />
+                <Main searchQuery={searchQuery} />
+            </SafeAreaView>
+            <Footer
+                isFocused={isFocused}
+                searchQuery={searchQuery}
+            />
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+    },
 });
