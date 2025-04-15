@@ -1,20 +1,17 @@
-import { View, StyleSheet, ScrollView } from 'react-native';
-import Dicas from './src/Pages/Suporte/Dicas';
-import FooterS from './src/Pages/Suporte/FooterS';
-import Forms from './src/Pages/Suporte/Forms';
-import Header from './src/Pages/Suporte/Header';
-import NavS from './src/Pages/Suporte/NavS';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import BarraPesquisa from './src/Pages/BarraPesquisa';
+import Cadastro from './src/Pages/Cadastro';
+import Home from './src/Pages/Home';
+import Login from './src/Pages/Login';
+import Suporte from './src/Pages/Suporte';
+import ViewJogos from './src/Pages/ViewJogos';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <NavS />
-      <ScrollView>
-        <Header />
-        <Forms />
-        <Dicas />
-      </ScrollView>
-      <FooterS/>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -22,9 +19,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#750000',
-  },
-  content: {
-    flex: 1, // O ScrollView ocupa todo o espaço disponível, exceto o do Footer
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
