@@ -1,20 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function Suporte() {
-  return (
-    <View style={styles.container}>
-      <Text>Olá seja Bem vindo a tela Suporte!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export * from './Dicas';
+export * from './Forms';
+export * from './Header';
+export * from './NavS';
+export * from './FooterS'
