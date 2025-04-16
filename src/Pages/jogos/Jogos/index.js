@@ -2,21 +2,21 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 
 const jogosAcao = [
-  { id: '1', nome: 'Hades', imagem: require('../../../../assets/hades.png') },
-  { id: '2', nome: 'Cuphead', imagem: require('../../../../assets/cuphead.jpg') },
-  { id: '3', nome: 'Celeste', imagem: require('../../../../assets/celeste.jpg') },
+  { id: '1', nome: 'Hades', imagem: require('../../../../../assets/hades.png') },
+  { id: '2', nome: 'Cuphead', imagem: require('../../../../../assets/cuphead.jpg') },
+  { id: '3', nome: 'Celeste', imagem: require('../../../../../assets/celeste.jpg') },
 ];
 
 const jogosAventura = [
-  { id: '4', nome: 'Hollow Knight', imagem: require('../../../../assets/hollowknight.jpg') },
-  { id: '5', nome: 'Journey', imagem: require('../../../../assets/journey.png') },
-  { id: '6', nome: 'Oxenfree', imagem: require('../../../../assets/oxenfree.png') },
+  { id: '4', nome: 'Hollow Knight', imagem: require('../../../../../assets/hollowknight.jpg') },
+  { id: '5', nome: 'Journey', imagem: require('../../../../../assets/journey.png') },
+  { id: '6', nome: 'Oxenfree', imagem: require('../../../../../assets/oxenfree.png') },
 ];
 
 const jogosTerror = [
-  { id: '7', nome: 'Outlast', imagem: require('../../../../assets/outlast.jpg') },
-  { id: '8', nome: 'Layers Of Fear', imagem: require('../../../../assets/layersoffear.png') },
-  { id: '9', nome: 'Fobia', imagem: require('../../../../assets/fobia.png') },
+  { id: '7', nome: 'Outlast', imagem: require('../../../../../assets/outlast.jpg') },
+  { id: '8', nome: 'Layers Of Fear', imagem: require('../../../../../assets/layersoffear.png') },
+  { id: '9', nome: 'Fobia', imagem: require('../../../../../assets/fobia.png') },
 ];
 
 function Jogos() {
