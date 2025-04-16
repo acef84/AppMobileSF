@@ -1,1 +1,1 @@
-export * from './jogos';
+export * from './Suporte';
