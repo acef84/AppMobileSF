@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, StyleSheet, Text, FlatList, SafeAreaView } from "react-native";
 import Nav from '../Nav';
 
@@ -11,10 +11,7 @@ const jogos = [
     { id: '6', nome: 'Hollow Knight' },
 ];
 
-export default function Main() {
-    const [searchQuery, setSearchQuery] = useState(""); // Estado para a pesquisa
-    const [isFocused, setIsFocused] = useState(false); // Estado para controlar se o campo está focado
-
+export default function Main({ searchQuery, setSearchQuery, isFocused, setIsFocused }) {
     const filteredJogos = jogos.filter(jogo =>
         jogo.nome.toLowerCase().includes(searchQuery.toLowerCase())
     );
