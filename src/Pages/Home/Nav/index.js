@@ -1,16 +1,22 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 export default function Nav() {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <View style={styles.logo}>
                 <Image style={styles.outroNomeMini} source={require('../../../../assets/safeStar.png')} />
             </View>
             <View style={styles.icones}>
-                <Image style={styles.outroNomeMini} source={require('../../../../assets/notificacoes.png')} />
-                <Image style={styles.outroNomeMini} source={require('../../../../assets/pesquisar.png')} />
-                <Image style={styles.outroNomeMini} source={require('../../../../assets/minhaConta.png')} />
+                <TouchableOpacity onPress={() => navigation.navigate('Pesquisa')}>
+                    <Image 
+                        style={styles.outroNomeMini} 
+                        source={require('../../../../assets/pesquisar.png')} 
+                    />
+                </TouchableOpacity>
             </View>
         </View>
     );
@@ -25,7 +31,7 @@ const styles = StyleSheet.create({
         alignItems: 'center', // Alinha os ícones verticalmente ao centro
         paddingHorizontal: 10, // Adiciona um pequeno espaço nas laterais
         paddingVertical: 20, // Adiciona um pouco de espaço vertical
-        position: 'absolute', // Posiciona a barra de navegação no topo
+        position: 'relative', // Posiciona a barra de navegação no topo
         elevation: 10,
         paddingTop: 50,
     },

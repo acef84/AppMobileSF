@@ -1,22 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Button } from "react-native";
-import { ScrollView } from "react-native";
-
-const PrimeiraTela = ({ navigation }) => {
-    return (
-      <View>
-        <Text>Primeira Tela</Text>
-        <Button
-          title="Ir para a Segunda Tela"
-          onPress={() => navigation.navigate('SegundaTela')}
-        />
-      </View>
-    );
-  };
 
 export default function Main(){
     return (
-    <ScrollView>
         <View style={styles.Novidade}>
             <View style={styles.capaFobia}>
                 <Image style={styles.fobia} source={require('../../../../assets/fobia.png')} />
@@ -62,7 +48,6 @@ export default function Main(){
                 </View>
             </View>
         </View>
-    </ScrollView>
     );
 }
 
@@ -168,7 +153,6 @@ const styles = StyleSheet.create({
     Novidade: {
         color: 'black',
         backgroundColor: '#750000',
-        marginTop: '21%',
         paddingTop: 10,
         height: '100%',
     },

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Main from './Main';
@@ -15,10 +16,12 @@ export default function TelaDePesquisa() {
         isFocused={isFocused}
         setIsFocused={setIsFocused}
       />
+      {/*
       <Footer 
         isFocused={isFocused} 
         searchQuery={searchQuery} 
       />
+      */}
     </View>
   );
 }
