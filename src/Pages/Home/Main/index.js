@@ -16,7 +16,7 @@ export default function Main(){
                     <Image style={styles.destaque01} source={require('../../../../assets/bloober.jpg')} />
                     <Text style={styles.nameGame}>Layers Of Fear</Text>
                     <Image style={styles.outroNomeMini} source={require('../../../../assets/RedBarrels.jpg')} />
-                    <Text style={styles.nameGame}>Fobia - Pulsatrix Studi</Text>
+                    <Text style={styles.nameGame}>Outlast</Text>
                 </View>
             </View>
             <View style={styles.jogos}>
