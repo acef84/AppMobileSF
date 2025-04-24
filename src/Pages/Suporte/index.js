@@ -5,7 +5,7 @@ export * from './NavS';
 export * from './FooterS'
 
 import React from 'react';
-import { View } from 'react-native'
+import { ScrollView, View } from 'react-native'
 import { StyleSheet } from 'react-native';
 import NavS from './NavS';
 import Header from './Header';
@@ -16,10 +16,12 @@ import Dicas from './Dicas';
 export default function TelaSuporte(){
     return(
         <View style={styles.container}>
+            <ScrollView>
             <NavS/>
             <Header/>
             <Forms/>
             <Dicas/>
+            </ScrollView>
         </View>
 
     )

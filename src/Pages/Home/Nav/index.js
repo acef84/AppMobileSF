@@ -26,14 +26,17 @@ const styles = StyleSheet.create({
     container: {
         width: '100%',
         backgroundColor: '#750000',
-        flexDirection: 'row', // Alinha ícones na mesma linha
-        justifyContent: 'space-between', // Espaço entre o ícone "star" e o grupo de ícones
-        alignItems: 'center', // Alinha os ícones verticalmente ao centro
-        paddingHorizontal: 10, // Adiciona um pequeno espaço nas laterais
-        paddingVertical: 20, // Adiciona um pouco de espaço vertical
-        position: 'relative', // Posiciona a barra de navegação no topo
-        elevation: 10,
-        paddingTop: 50,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 15,
+        paddingVertical: 15,
+        paddingTop: 40,
+        elevation: 5, // Sombra para Android
+        shadowColor: '#000', // Cor da sombra para iOS
+        shadowOffset: { width: 0, height: 2 }, // Deslocamento da sombra
+        shadowOpacity: 0.2, // Opacidade da sombra
+        shadowRadius: 2, // Raio do blur da sombra
     },
     logo: {
         backgroundColor: 'red'
