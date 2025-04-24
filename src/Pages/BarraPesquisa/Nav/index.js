@@ -12,7 +12,7 @@ export default function Nav({ setSearchQuery, isFocused, setIsFocused }) {
                 <TextInput
                     style={styles.searchInput}
                     placeholder="Pesquisar jogos..."
-                    placeholderTextColor="#fff"
+                    placeholderTextColor= "#c3c3c3"
                     onChangeText={setSearchQuery}
                     onFocus={() => setIsFocused(true)} // Atualiza o estado de foco para true
                     onBlur={() => setIsFocused(false)}  // Atualiza o estado de foco para false ao sair do campo
@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
         width: '90%',
     },
     searchInput: {
-        backgroundColor: '#FF0000',
+        backgroundColor: "#330001",
         height: 40,
-        paddingHorizontal: 15,
-        borderRadius: 5,
-        fontSize: 18,
+        paddingHorizontal: 17,
+        borderRadius: 12,
+        fontSize: 15,
         flex: 1,
     },
     searchIcon: {

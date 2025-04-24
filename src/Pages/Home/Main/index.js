@@ -52,9 +52,7 @@ export default function Main(){
 }
 
 const styles = StyleSheet.create({
-    containerFobia: {
 
-    },
     classificaoEtaria: {
         flexDirection: 'row'
     },
@@ -76,13 +74,13 @@ const styles = StyleSheet.create({
     capa: {
         width: 120,
         height: 60,
-        borderRadius: 0,
+        borderRadius: 6,
         marginTop: 5,
     },
     jogos: {
         backgroundColor: '#800000',
         paddingLeft: 10,
-        paddingBottom: 30
+        paddingBottom: 30,
     },
     bannersDestaques: {
         flexDirection: 'row',
@@ -147,7 +145,10 @@ const styles = StyleSheet.create({
     fobia: {
         width: 400,
         height: 240,
-        borderRadius: 15
+        borderRadius: 15,
+        margin: 8,
+        paddingLeft: 10,
+        paddingBottom: 30,
     },
 
     Novidade: {
