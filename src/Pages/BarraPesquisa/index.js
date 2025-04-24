@@ -1,12 +1,27 @@
 
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import Main from './Main';
+import Footer from './Footer';
 
-export default function BarraPesquisa() {
+export default function TelaDePesquisa() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+
   return (
     <View style={styles.container}>
-      <Text>Olá seja Bem vindo a tela de barra de pesquisa!</Text>
-      <StatusBar style="auto" />
+      <Main 
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        isFocused={isFocused}
+        setIsFocused={setIsFocused}
+      />
+      {/*
+      <Footer 
+        isFocused={isFocused} 
+        searchQuery={searchQuery} 
+      />
+      */}
     </View>
   );
 }
@@ -14,8 +29,5 @@ export default function BarraPesquisa() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

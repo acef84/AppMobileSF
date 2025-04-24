@@ -1,21 +1,66 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import BarraPesquisa from './src/Pages/BarraPesquisa';
-import Cadastro from './src/Pages/Cadastro';
-import Home from './src/Pages/Home';
-import Login from './src/Pages/Login';
-import Suporte from './src/Pages/Suporte';
-import ViewJogos from './src/Pages/ViewJogos';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import { Image } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import TelaHome from './src/Pages/Home';
+import TelaSuporte from './src/Pages/Suporte';
+import TelaDePesquisa from './src/Pages/BarraPesquisa';
+
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+export function Tabs(){
+  return(
+    <Tab.Navigator 
+    screenOptions={{tabBarStyle: {backgroundColor: 'red'},
+    tabBarActiveTintColor: 'black',
+    tabBarInactiveTintColor: 'white'
+    }}
+
+    >
+      <Tab.Screen 
+      name='Feed' 
+      component={TelaHome} 
+      options={{ 
+        headerShown: false,
+        tabBarIcon: ({ size }) => (
+          <Image
+            source={require('./assets/home.png')}
+            style={{ width: size, height: size }}
+          />
+        ),
+      }}
+      />
+      <Tab.Screen name='Suporte' 
+      component={TelaSuporte}
+      options={{
+        headerShown: false,
+        tabBarIcon: ({ size }) => (
+          <Image
+            source={require('./assets/suporte.png')}
+            style={{ width: size, height: size }}
+          />
+        ),
+      }}
+      />
+      <Tab.Screen name='Pesquisa' 
+      component={TelaDePesquisa}
+      options={{
+        headerShown: false,
+        tabBarIcon: ({ size }) => (
+          <Image
+            source={require('./assets/lupa.png')}
+            style={{ width: size, height: size }}
+          />
+        ),
+      }}
+      />
+    </Tab.Navigator>
+  )
 }
 
+ ViewJogos
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -24,3 +69,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+=======
+export default function App() {
+  return (
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName='Home'>
+            <Stack.Screen name='Home' component={Tabs} options={{headerShown: false,}}/>
+            <Stack.Screen name='Suporte' component={TelaSuporte} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+}
+main
