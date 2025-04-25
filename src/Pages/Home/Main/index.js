@@ -1,12 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, Button } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 export default function Main(){
+    const navigation = useNavigation();
     return (
+        
         <View style={styles.Novidade}>
-            <View style={styles.capaFobia}>
-                <Image style={styles.fobia} source={require('../../../../assets/fobia.png')} />
-            </View>
+
+            <TouchableOpacity onPress={() => navigation.navigate('TelaFobia')}>
+                <Image 
+                style={styles.fobia} 
+                source={require('../../../../assets/fobia.png')} />
+            </TouchableOpacity>
             <View style={styles.gamesDestaques}>
                 <View style={styles.bannersDestaques}>
                     <Image style={styles.outroNome} source={require('../../../../assets/layers.png')} />
